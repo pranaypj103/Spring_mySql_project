@@ -1,3 +1,3 @@
-FROM tomcat:9-jre9
-COPY target/my-shop-1.0.jar /usr/local/tomcat/webapps/
-ENTRYPOINT ["java", "-jar", "my-shop-1.0.jar"]
+FROM openjdk:17-jdk-slim
+COPY target/my-shop-1.0.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
